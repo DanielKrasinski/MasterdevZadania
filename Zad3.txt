@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+namespace Demo {
+   class Program {
+      static void Main(string[] args) {
+         var random = new Random();
+         var list1 = new List<string>{ "Ania","Kasia","Basia","Zosia"};
+         var list2 = new List<string>{ "Kowalska","Nowak"};
+         var list3 = new List<string>{ "1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000"};
+         for (int i = 0; i < 100; i++){
+         int index1 = random.Next(list1.Count);
+         int index2 = random.Next(list2.Count);
+         int index3 = random.Next(list3.Count);
+         Console.WriteLine(i + ", " + list1[index1] + ", " + list2[index2] + ", " + list3[index3]+"\n") ;
+         }
+      }
+   }
+}

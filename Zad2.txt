@@ -1,0 +1,21 @@
+using System;
+using System.IO;
+  
+class Praca
+{
+
+    public static void Main()
+    {
+        string plik = @"C:\test\test.txt";
+        System.IO.FileInfo fi = new System.IO.FileInfo(@"C:\test\test.txt");
+        String str = File.ReadAllText(@"C:\test\test.txt");
+        Console.WriteLine("Stary String : " + str);
+        str = str.Replace("praca", "job");
+        Console.WriteLine("Nowy String: " + str);
+        if (fi.Exists)
+        {
+            fi.MoveTo(@"C:\test\test_changed.txt");
+            Console.WriteLine("Nazwa zmieniona.");
+        }
+    }
+}

@@ -1,0 +1,14 @@
+using System;
+
+public class Example
+{
+    public static void Main()
+    {
+        string tekst = File.ReadAllText(@"C:\test\gpt.txt");
+        int count = 0;
+        foreach (char a in tekst)
+            if (a == 'a') count++;
+        Console.WriteLine("Litera a wystapila " + count + " razy");
+
+    }
+}

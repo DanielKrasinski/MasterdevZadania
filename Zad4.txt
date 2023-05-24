@@ -1,0 +1,12 @@
+using System;
+ 
+public class Zad4
+{
+    public static void Main()
+    {
+        Console.Write("Wpisz kwote: ");
+        string a = Console.ReadLine();
+        double doubleVal = Convert.ToDouble(a);
+        Console.WriteLine("Twoja kwota wynosi " + doubleVal / 4.14 + " USD");
+    }
+}
